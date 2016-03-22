@@ -1,0 +1,80 @@
+---
+title: 100 Days CSS Challenge
+description: 100 Days CSS Challenge is a learning process for me and a collection for you, made with love by Matthias Martin.
+pens: [
+  {number: "045", id: "GZWzWd"},
+  {number: "044", id: "bpqRLe"},
+  {number: "043", id: "GZWqKL"},
+  {number: "042", id: "dMNrxP"},
+  {number: "041", id: "grgKbj"},
+  {number: "040", id: "VaPKvj"},
+  {number: "039", id: "BKQGVR"},
+  {number: "038", id: "JXbXGM"},
+  {number: "037", id: "mPrqQw"},
+  {number: "036", id: "bpwwWZ"},
+  {number: "035", id: "bpeJLP"},
+  {number: "034", id: "vGKZKy"},
+  {number: "033", id: "grrqap"},
+  {number: "032", id: "KzzgEm"},
+  {number: "031", id: "GZoxRy"},
+  {number: "030", id: "WwrNqQ"},
+  {number: "029", id: "GZpzEE"},
+  {number: "028", id: "pyjdRJ"},
+  {number: "027", id: "BKNEoK"},
+  {number: "026", id: "reVGbL"},
+  {number: "025", id: "WwbmXx"},
+  {number: "024", id: "zqxoEo"},
+  {number: "023", id: "wGvEVY"},
+  {number: "022", id: "BKadMO"},
+  {number: "021", id: "pyozgJ"},
+  {number: "020", id: "NNKzgP"},
+  {number: "019", id: "xVKweb"},
+  {number: "018", id: "yemzzX"},
+  {number: "017", id: "EPBvmm"},
+  {number: "016", id: "eJwbed"},
+  {number: "015", id: "ZQdbeN"},
+  {number: "014", id: "BjegrP"},
+  {number: "013", id: "zrQorm"},
+  {number: "012", id: "gPyzEa"},
+  {number: "011", id: "VeNvby"},
+  {number: "010", id: "PZLjav"},
+  {number: "009", id: "MKxgWz"},
+  {number: "008", id: "XXOqoG"},
+  {number: "007", id: "ZQwJyj"},
+  {number: "006", id: "OMreoV"},
+  {number: "005", id: "GoPvNN"},
+  {number: "004", id: "yeQZLm"},
+  {number: "003", id: "PZxpKO"},
+  {number: "002", id: "ZQmbNm"},
+  {number: "001", id: "JGmvaE"}
+]
+---
+
+<div class="social">
+  <p class="title">Subscribe or follow for updates</p>
+
+  <form action="//matzemachtdesign.us12.list-manage.com/subscribe/post-json?u=86cf139e31509463533298e6d&amp;id=4657eec6d6&amp;c=?" method="post" class="subscribe-form">
+    <input type="text" name="EMAIL" value="" placeholder="Your email address" class="input" autocomplete="off">
+    <input type="submit" class="submit" id="subscribe-submit" value="Sign me up!">
+    <div class="result"></div>
+  </form>
+  <div class="follow">
+    <a href="http://codepen.io/roydigerhund/" title="Follow on CodePen" target="_blank"><img src="assets/img/codepen.svg" height="35" width="35" alt="CodePen"></a>
+    <a href="https://twitter.com/RoyDigerhund" title="Follow on Twitter" target="_blank"><img src="assets/img/twitter.svg" height="35" width="35" alt="twitter"></a>
+  </div>
+</div>
+
+<div class="pens clearfix">
+  {{#each pens}}
+
+    <div class="pen" id="pen_{{this.id}}">
+      <a class="title" href="http://codepen.io/roydigerhund/pen/{{this.id}}/" title="Open day {{ this.number }}" target="_blank">
+        {{ this.number }}
+      </a>
+      <div class="content clearfix">
+        <p data-height="500" data-theme-id="22129" data-slug-hash="{{this.id}}" data-default-tab="result" data-user="roydigerhund" class='codepen'>See the Pen <a href='http://codepen.io/roydigerhund/pen/{{this.number}}/' target='blank' title='{{this.number}}'>{{this.number}}</a> by Matthias Martin (<a href='http://codepen.io/roydigerhund' target='blank' title='CodePen'>@roydigerhund</a>)</p>
+      </div>
+    </div>
+
+  {{/each}}
+</div>
