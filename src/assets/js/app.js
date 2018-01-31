@@ -86,6 +86,32 @@ $( document ).ready(function() {
 
   }
 
+  // Paypal
+  function getValue() {
+    var str = $("#amount").val();
+    str = str.replace(/[^0-9.,]/g, "");
+    var val = parseFloat(str.replace(",", "."));
+    return (isNaN(val) || val < 0) ? 0 : val;
+  }
+
+  $("#amount").on('change blur keyup', function() {
+    var value = getValue().toFixed(2);
+    $("#ppamount").val(value);
+  });
+
+  $(".pay-form").submit(function(event) {
+    var val = getValue();
+    var msg = 'Due to PayPal fees, the minimum amount is $0.50. \n' +
+    'If you wish to download the file, press OK and you will not be charged. ' +
+    'If you want to change the amount, press Cancel.';
+    if (val < 0.50) {
+      event.preventDefault();
+      if (val == 0 || confirm(msg)) {
+        window.location = "http://100dayscss.com/download.html";
+      }
+    }
+  });
+
   // CodePen
   function showThePen(penID) {
     var wrapper = $('#pen_' + penID + ' .codepen'),

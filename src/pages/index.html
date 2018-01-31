@@ -2,6 +2,46 @@
 title: 100 Days CSS Challenge
 description: 100 Days CSS Challenge is a learning process for me and a collection for you, made with love by Matthias Martin.
 pens: [
+  {number: "100", id: "WwWPYe"},
+  {number: "099", id: "LNvBNB"},
+  {number: "098", id: "PNgKEJ"},
+  {number: "097", id: "EKJajz"},
+  {number: "096", id: "jqJvWK"},
+  {number: "095", id: "GZerZg"},
+  {number: "094", id: "wGNxzg"},
+  {number: "093", id: "zqePgO"},
+  {number: "092", id: "mPvRXO"},
+  {number: "091", id: "oxmgWw"},
+  {number: "090", id: "WwLYPg"},
+  {number: "089", id: "EKGXpx"},
+  {number: "088", id: "qZLBBW"},
+  {number: "087", id: "grQKdM"},
+  {number: "086", id: "ZWmLeN"},
+  {number: "085", id: "QNJjMJ"},
+  {number: "084", id: "BKqENE"},
+  {number: "083", id: "bpmLBW"},
+  {number: "082", id: "bpxXOw"},
+  {number: "081", id: "vGzaeR"},
+  {number: "080", id: "LNJWjM"},
+  {number: "079", id: "aNjror"},
+  {number: "078", id: "NNBoWw"},
+  {number: "077", id: "LNBdEj"},
+  {number: "076", id: "xVJGEG"},
+  {number: "075", id: "WwyYgw"},
+  {number: "074", id: "RaJgvX"},
+  {number: "073", id: "xVjvyb"},
+  {number: "072", id: "YqLaJm"},
+  {number: "071", id: "qZYryb"},
+  {number: "070", id: "MyGyQy"},
+  {number: "069", id: "VaXgwM"},
+  {number: "068", id: "XdENQV"},
+  {number: "067", id: "redByy"},
+  {number: "066", id: "oxEoNO"},
+  {number: "065", id: "vGdGaw"},
+  {number: "064", id: "WwMNNO"},
+  {number: "063", id: "ZWvPbj"},
+  {number: "062", id: "VayMGJ"},
+  {number: "061", id: "pypvVj"},
   {number: "060", id: "pydZJZ"},
   {number: "059", id: "aNVZvo"},
   {number: "058", id: "GZMLbK"},
@@ -65,8 +105,50 @@ pens: [
 ]
 ---
 
-<div class="social">
-  <p class="title">Subscribe or follow for updates</p>
+<div class="intro clearfix">
+
+  <div class="left">
+    <code class="code" onclick="void(0);">
+      <span class="purple">for</span> (day <span class="turquoise">=</span> <span class="orange">1</span>; day <span class="turquoise"><=</span> <span class="orange">100</span>; day<span class="turquoise">++</span>) {<br/>
+        &nbsp;&nbsp;<span class="blue">getAnIdea</span>();<br/>
+        &nbsp;&nbsp;<span class="blue">writeHTML</span>();<br/>
+        &nbsp;&nbsp;<span class="blue">writeCSS</span>();<br/>
+        &nbsp;&nbsp;<span class="blue">beHappy</span>();<br/><br/>
+        &nbsp;&nbsp;<span class="purple">if</span> (day <span class="turquoise">==</span> <span class="orange">100</span>) {<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">celebrate</span>();<br/>
+        &nbsp;&nbsp;}<br/>
+      }
+      <p class="info">For 100 consecutive days I've written HTML and CSS snippets as a creative learning process for myself. <br/><br/>All snippets are embed below and available on CodePen.</p>
+    </code>
+  </div>
+
+  <div class="right">
+    <div class="download">
+      <p class="title">Download all code snippets</p>
+      <p class="info">A small tip will help me keep this site running.</p>
+      <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pay-form" target="_top">
+        <input type="hidden" name="rm" value="2" />
+        <input type="hidden" name="cmd" value="_xclick" />
+        <input type="hidden" name="business" value="kontakt@matzemachtdesign.de" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="hidden" name="item_name" value="100 Days CSS Challenge" />
+        <input type="hidden" name="return" value="http://100dayscss.com/download.html" />
+        <input type="hidden" name="cancel_return" value="http://100dayscss.com/" />
+        <input type="hidden" name="amount" id="ppamount" value="0" />
+        <div class="input-line">
+          <span class="pre">$</span>
+          <input type="text" name="pwyw" value="" placeholder="Amount" class="input" id="amount" />
+          <input type="submit" border="0" name="submit" value="Download" class="submit"/>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="social clearfix">
+  <p class="title">Subscribe for news about web development</p>
 
   <form action="//matzemachtdesign.us12.list-manage.com/subscribe/post-json?u=86cf139e31509463533298e6d&amp;id=4657eec6d6&amp;c=?" method="post" class="subscribe-form">
     <input type="text" name="EMAIL" value="" placeholder="Your email address" class="input" autocomplete="off">
@@ -80,6 +162,7 @@ pens: [
 </div>
 
 <div class="pens clearfix">
+
   {{#each pens}}
 
     <div class="pen" id="pen_{{this.id}}">
@@ -87,7 +170,7 @@ pens: [
         {{ this.number }}
       </a>
       <div class="content clearfix">
-        <p data-height="500" data-theme-id="22129" data-slug-hash="{{this.id}}" data-default-tab="result" data-user="roydigerhund" class='codepen'>See the Pen <a href='http://codepen.io/roydigerhund/pen/{{this.number}}/' target='blank' title='{{this.number}}'>{{this.number}}</a> by Matthias Martin (<a href='http://codepen.io/roydigerhund' target='blank' title='CodePen'>@roydigerhund</a>)</p>
+        <p data-height="500" data-theme-id="22129" data-slug-hash="{{this.id}}" data-default-tab="result" data-user="roydigerhund" class='codepen'>See the Pen <a href='http://codepen.io/roydigerhund/pen/{{this.id}}/' target='blank' title='{{this.number}}'>{{this.number}}</a> by Matthias Martin (<a href='http://codepen.io/roydigerhund' target='blank' title='CodePen'>@roydigerhund</a>)</p>
       </div>
     </div>
 

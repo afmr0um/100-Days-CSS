@@ -32,6 +32,9 @@ var PATHS = {
   ],
   codepen: [
     'src/codepen/**/*'
+  ],
+  root: [
+    'src/root/**/*'
   ]
 };
 
@@ -50,6 +53,8 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('dist'));
   gulp.src(PATHS.codepen)
     .pipe(gulp.dest('dist/codepen'));
+  gulp.src(PATHS.root)
+    .pipe(gulp.dest('dist'));
 });
 
 // Copy page templates into finished HTML files
@@ -58,17 +63,16 @@ gulp.task('pages', function() {
     .pipe(panini({
       root: 'src/pages/',
       layouts: 'src/layouts/',
-      partials: 'src/partials/',
-      data: 'src/data/',
-      helpers: 'src/helpers/'
+      // partials: 'src/partials/',
+      // data: 'src/data/',
+      // helpers: 'src/helpers/'
     }))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('pages:reset', function(cb) {
+gulp.task('pages:reset', function(done) {
   panini.refresh();
-  gulp.run('pages');
-  cb();
+  sequence('pages', done);
 });
 
 // Compile Sass into CSS
